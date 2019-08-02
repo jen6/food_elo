@@ -1,0 +1,23 @@
+{{set . "title" "Home"}}
+{{append . "moreScripts" "js/rating-board.js"}}
+{{template "header.html" .}}
+<div class="container">
+  <div class="row">
+    <div class="span6">
+      <a href="/battle"> 취향 분석 조금 더 하기</a>
+      <table>
+        <thead>
+          <tr>
+            <th>FoodName</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody id="rating_table">
+        </tbody>
+      </table>
+      {{template "flash.html" .}}
+    </div>
+  </div>
+</div>
+
+{{template "footer.html" .}}

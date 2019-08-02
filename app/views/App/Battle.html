@@ -1,0 +1,25 @@
+{{set . "title" "Home"}}
+{{append . "moreScripts" "js/elo-calc.js"}}
+{{append . "moreScripts" "js/elo.js"}}
+{{template "header.html" .}}
+
+<header class="jumbotron" >
+  <div class="container">
+    <div class="row">
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="span6">
+      <a href="/myrating"> 취향 분석 결과 보러가기</a>
+      <div>
+          <input type="button" id="food_a" value="food_a" style="width:200px; height:200px;margin: 200px;" onClick="action(true);">
+          <input type="button" id="food_b" value="food_b" style="width:200px; height:200px;" onClick="action(false)">
+      </div>
+    </div>
+  </div>
+</div>
+
+{{template "footer.html" .}}

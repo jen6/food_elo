@@ -1,0 +1,30 @@
+{{set . "title" "Home"}}
+{{template "header.html" .}}
+
+<div class="container">
+  <div class="row">
+    <div class="span6">
+      <table>
+        <thead>
+          <tr>
+            <th>Idx</th>
+            <th>FoodName</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{range .foods}}
+          <tr>
+            <td>{{.Idx}}</td>
+            <td>{{.Name}}</td>
+            <td>{{.Rating}}</td>
+          </tr>
+          {{end}}
+        </tbody>
+      </table>
+      {{template "flash.html" .}}
+    </div>
+  </div>
+</div>
+
+{{template "footer.html" .}}
